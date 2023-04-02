@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+	<title>Document</title>
+</head>
+<body>
+
+	<section class="sec">
+		<div class="dev1">
+			<h1>login form</h1>
+			<h2>enter your email</h2>
+			<label for="email">
+				<input type="email" id="email" placeholder="enter your email">
+			</label>
+			<h2>enter your password</h2>
+			<label for="password">
+				<input type="password" id="password" placeholder="enter your password">
+			</label>
+			<button type="submit">sign in</button>
+		</div>
+
+
+	</section>
+	<section class="sec2">
+		<div class="overlay">
+			<h1>wellcome aliyan rahmat</h1>
+			<button class="ghost" id="signUp">submit</button>
+		</div>
+	</section>
+	
+	<script src="index.js">
+		const password = document.querySelector(selectors.'#password');
+const overlay = document.querySelector(selectors.'.overlay');
+
+password.addEventListener(type:'keyup', listener:(e:Event) =>{
+    console.log(e.target.value.length )
+    let password_num = e.target.value.length;
+    let blur_val=30 - (password_num * 3)
+
+    overlay.style.filter = `blur(${blur_val}px)`
+})
+	</script>
+</body>
+</html>
